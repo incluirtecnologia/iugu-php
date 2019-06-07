@@ -96,4 +96,9 @@ class Iugu_Object implements ArrayAccess
 
         return get_called_class();
     }
+
+    public function getAttributes()
+    {
+        return $this->_attributes;
+    }
 }
