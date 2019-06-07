@@ -7,7 +7,7 @@ class Iugu_WebHook extends APIResource
     {
         return self::createAPI($attributes);
     }
-    public static function fetch($key)
+    public static function fetch($key = null)
     {
         return self::fetchAPI($key);
     }

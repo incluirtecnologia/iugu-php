@@ -123,7 +123,7 @@ class APIResource extends Iugu_Object
         return [];
     }
 
-    protected static function fetchAPI($key)
+    protected static function fetchAPI($key = null)
     {
         try {
             $response = static::API()->request(
