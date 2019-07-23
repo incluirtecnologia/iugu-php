@@ -19,4 +19,8 @@ class Iugu_WebHook extends APIResource
     {
         return $this->deleteAPI();
     }
+    public static function update(string $webhookId, array $attributes = [])
+    {
+        return self::updateAPI($webhookId, $attributes);
+    }
 }

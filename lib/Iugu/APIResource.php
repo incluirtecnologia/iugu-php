@@ -182,4 +182,12 @@ class APIResource extends Iugu_Object
         return true;
     }
 
+    protected function updateAPI(string $resourceId, array $attributes)
+    {
+        $response = self::createFromResponse(self::API()->request('PUT', static::url($attributes) . '/' . $resourceId, $attributes));
+        foreach ($attributes as $attr => $value) {
+            $response[$attr] = $value;
+        }
+        return $response;
+    }
 }
